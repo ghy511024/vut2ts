@@ -1,0 +1,13 @@
+node_modules/
+*/node_modules/
+.DS_Store
+.vscode
+npm-debug.log
+yarn-error.log
+*.swp
+.sw*
+.idea/
+.travis.yml
+.cache
+.server.json
+.code-workspace

@@ -1,0 +1,280 @@
+{
+  "type": 1,
+  "ns": 0,
+  "tag": "template",
+  "tagType": 0,
+  "props": [],
+  "isSelfClosing": false,
+  "children": [
+    {
+      "type": 2,
+      "content": "  ",
+      "loc": {
+        "start": {
+          "column": 11,
+          "line": 1,
+          "offset": 10
+        },
+        "end": {
+          "column": 3,
+          "line": 2,
+          "offset": 14
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "xixi",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 2,
+                "offset": 25
+              },
+              "end": {
+                "column": 20,
+                "line": 2,
+                "offset": 31
+              },
+              "source": "\"xixi\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 2,
+              "offset": 19
+            },
+            "end": {
+              "column": 20,
+              "line": 2,
+              "offset": 31
+            },
+            "source": "class=\"xixi\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "if",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 27,
+                "line": 2,
+                "offset": 38
+              },
+              "end": {
+                "column": 33,
+                "line": 2,
+                "offset": 44
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 2,
+              "offset": 32
+            },
+            "end": {
+              "column": 34,
+              "line": 2,
+              "offset": 45
+            },
+            "source": "v-if=\"isTrue\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 2,
+          "offset": 14
+        },
+        "end": {
+          "column": 41,
+          "line": 2,
+          "offset": 52
+        },
+        "source": "<div class=\"xixi\" v-if=\"isTrue\"></div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 41,
+          "line": 2,
+          "offset": 52
+        },
+        "end": {
+          "column": 3,
+          "line": 3,
+          "offset": 56
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "haha",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 3,
+                "offset": 67
+              },
+              "end": {
+                "column": 20,
+                "line": 3,
+                "offset": 73
+              },
+              "source": "\"haha\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 3,
+              "offset": 61
+            },
+            "end": {
+              "column": 20,
+              "line": 3,
+              "offset": 73
+            },
+            "source": "class=\"haha\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "else",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 29,
+                "line": 3,
+                "offset": 82
+              },
+              "end": {
+                "column": 35,
+                "line": 3,
+                "offset": 88
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 3,
+              "offset": 74
+            },
+            "end": {
+              "column": 36,
+              "line": 3,
+              "offset": 89
+            },
+            "source": "v-else=\"isTrue\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [
+        {
+          "type": 2,
+          "content": "    666666666\r\n  ",
+          "loc": {
+            "start": {
+              "column": 37,
+              "line": 3,
+              "offset": 90
+            },
+            "end": {
+              "column": 3,
+              "line": 5,
+              "offset": 109
+            },
+            "source": "\r\n    666666666\r\n  "
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 3,
+          "offset": 56
+        },
+        "end": {
+          "column": 9,
+          "line": 5,
+          "offset": 115
+        },
+        "source": "<div class=\"haha\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n",
+      "loc": {
+        "start": {
+          "column": 9,
+          "line": 5,
+          "offset": 115
+        },
+        "end": {
+          "column": 1,
+          "line": 6,
+          "offset": 117
+        },
+        "source": "\r\n"
+      }
+    }
+  ],
+  "loc": {
+    "start": {
+      "column": 1,
+      "line": 1,
+      "offset": 0
+    },
+    "end": {
+      "column": 12,
+      "line": 6,
+      "offset": 128
+    },
+    "source": "<template>\r\n  <div class=\"xixi\" v-if=\"isTrue\"></div>\r\n  <div class=\"haha\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>\r\n</template>"
+  }
+}

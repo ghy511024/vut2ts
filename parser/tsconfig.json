@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2015",
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "./build",
+    "baseUrl": "../src",
+    "types": ["node"]
+  },
+  "include": [
+    "../src"
+  ]
+}
