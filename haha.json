@@ -176,7 +176,7 @@
         },
         {
           "type": 7,
-          "name": "else",
+          "name": "else-if",
           "exp": {
             "type": 4,
             "content": "isTrue",
@@ -184,14 +184,14 @@
             "constType": 0,
             "loc": {
               "start": {
-                "column": 29,
+                "column": 32,
                 "line": 3,
-                "offset": 82
+                "offset": 85
               },
               "end": {
-                "column": 35,
+                "column": 38,
                 "line": 3,
-                "offset": 88
+                "offset": 91
               },
               "source": "isTrue"
             }
@@ -204,9 +204,120 @@
               "offset": 74
             },
             "end": {
-              "column": 36,
+              "column": 39,
               "line": 3,
-              "offset": 89
+              "offset": 92
+            },
+            "source": "v-else-if=\"isTrue\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 3,
+          "offset": 56
+        },
+        "end": {
+          "column": 46,
+          "line": 3,
+          "offset": 99
+        },
+        "source": "<div class=\"haha\" v-else-if=\"isTrue\"></div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 46,
+          "line": 3,
+          "offset": 99
+        },
+        "end": {
+          "column": 3,
+          "line": 4,
+          "offset": 103
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "hehe",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 4,
+                "offset": 114
+              },
+              "end": {
+                "column": 20,
+                "line": 4,
+                "offset": 120
+              },
+              "source": "\"hehe\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 4,
+              "offset": 108
+            },
+            "end": {
+              "column": 20,
+              "line": 4,
+              "offset": 120
+            },
+            "source": "class=\"hehe\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "else",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 29,
+                "line": 4,
+                "offset": 129
+              },
+              "end": {
+                "column": 35,
+                "line": 4,
+                "offset": 135
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 4,
+              "offset": 121
+            },
+            "end": {
+              "column": 36,
+              "line": 4,
+              "offset": 136
             },
             "source": "v-else=\"isTrue\""
           }
@@ -220,13 +331,13 @@
           "loc": {
             "start": {
               "column": 37,
-              "line": 3,
-              "offset": 90
+              "line": 4,
+              "offset": 137
             },
             "end": {
               "column": 3,
-              "line": 5,
-              "offset": 109
+              "line": 6,
+              "offset": 156
             },
             "source": "\r\n    666666666\r\n  "
           }
@@ -235,15 +346,15 @@
       "loc": {
         "start": {
           "column": 3,
-          "line": 3,
-          "offset": 56
+          "line": 4,
+          "offset": 103
         },
         "end": {
           "column": 9,
-          "line": 5,
-          "offset": 115
+          "line": 6,
+          "offset": 162
         },
-        "source": "<div class=\"haha\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>"
+        "source": "<div class=\"hehe\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>"
       }
     },
     {
@@ -252,13 +363,13 @@
       "loc": {
         "start": {
           "column": 9,
-          "line": 5,
-          "offset": 115
+          "line": 6,
+          "offset": 162
         },
         "end": {
           "column": 1,
-          "line": 6,
-          "offset": 117
+          "line": 7,
+          "offset": 164
         },
         "source": "\r\n"
       }
@@ -272,9 +383,9 @@
     },
     "end": {
       "column": 12,
-      "line": 6,
-      "offset": 128
+      "line": 7,
+      "offset": 175
     },
-    "source": "<template>\r\n  <div class=\"xixi\" v-if=\"isTrue\"></div>\r\n  <div class=\"haha\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>\r\n</template>"
+    "source": "<template>\r\n  <div class=\"xixi\" v-if=\"isTrue\"></div>\r\n  <div class=\"haha\" v-else-if=\"isTrue\"></div>\r\n  <div class=\"hehe\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>\r\n</template>"
   }
 }

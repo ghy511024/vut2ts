@@ -33,11 +33,7 @@ export class TemplateGenerate {
         }
         let array = []
         const out = new OutStream();
-        if (ast.children) {
-            for (let child of ast.children) {
-                parseManager.getParseByType(child.type).parse(out, child)
-            }
-        }
+        parseManager.getParseByType(ast.type).parse(out, ast)
         return out.toString();
     }
 

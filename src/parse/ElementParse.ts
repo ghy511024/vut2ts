@@ -3,7 +3,7 @@
  * @desc
  */
 import {BaseParse} from "./BaseParse";
-import {ElementNode, NodeTypes, SimpleExpressionNode, TemplateNode} from "@vue/compiler-core";
+import {BaseElementNode, ElementNode, NodeTypes, SimpleExpressionNode, TemplateNode} from "@vue/compiler-core";
 import {parseManager} from "./ParseManager";
 import {OutStream} from "../writer/OutStream";
 
@@ -30,30 +30,114 @@ export class ElementParse extends BaseParse {
         }
         tmpOut.write(">");
         // === 处理孩子节点
+        let ifStart = false;
         const children = node.children;
         if (children) {
-            for (let child of children) {
+            for (var i = 0; i < children.length; i++) {
+                let child = children[i]
                 const type: NodeTypes = child.type;
-                parseManager.getParseByType(child.type).parse(tmpOut, child as ElementNode)
+                const directiveType = this.isHaveDirectiveProps(child as ElementNode)
+                if (directiveType == "if") {
+                    let ifConditionArray = []
+                    ifConditionArray.push(child);
+                    for (var j = i + 1; j < children.length; j++) {
+                        let nextChild = children[j]
+                        let nextDirectiveType = this.isHaveDirectiveProps(nextChild as ElementNode)
+                        console.log("nextDirectiveType", nextDirectiveType)
+                        if (nextChild.type == 1 && (nextDirectiveType == "else" || nextDirectiveType == "else-if")) {
+                            ifConditionArray.push(nextChild);
+                            i = j;
+                        } else if (nextChild.type == 1) {
+                            console.log("stop")
+                            break;
+                        }
+                    }
+                    // 开始处理if
+                    let ifOutStream = new OutStream();
+                    this.parseIfCondition(ifOutStream, ifConditionArray)
+                    tmpOut.writeLn(ifOutStream.toString())
+                } else {
+                    parseManager.getParseByType(child.type).parse(tmpOut, child as ElementNode)
+                }
             }
         }
         tmpOut.write(`</${tag}>`);
 
         // 处理指令节点
-        if (props && props.length) {
-            for (var pro of props) {
+        // if (props && props.length) {
+        //     for (var pro of props) {
+        //         if (pro.type == NodeTypes.DIRECTIVE) {
+        //             const name = pro.name
+        //             if (name == "if") {
+        //                 tmpOut = this.parseIf(tmpOut, pro.exp as SimpleExpressionNode)
+        //             } else if (name == "for") {
+        //                 tmpOut = this.parseFor(tmpOut, pro.exp as SimpleExpressionNode)
+        //             }
+        //         }
+        //     }
+        // }
+        out.write(tmpOut.toString());
+    }
+
+    // 是否包含指令
+    isHaveDirectiveProps(node: ElementNode) {
+        if (node.props) {
+            const directives = ["if", "else", "else-if", "for"]
+            for (var pro of node.props) {
                 if (pro.type == NodeTypes.DIRECTIVE) {
                     const name = pro.name
-                    if (name == "if") {
-                        tmpOut = this.parseIf(tmpOut, pro.exp as SimpleExpressionNode)
-                    } else if (name == "for") {
-                        tmpOut = this.parseFor(tmpOut, pro.exp as SimpleExpressionNode)
+                    if (directives.indexOf(name) >= 0) {
+                        return pro.name
                     }
                 }
             }
-
         }
-        out.write(tmpOut.toString());
+    }
+
+    // 是否包含指令
+    isHaveIf(node: ElementNode) {
+        if (node.props) {
+            const directives = ["if", "else", "else-if", "for"]
+            for (var pro of node.props) {
+                if (pro.type == NodeTypes.DIRECTIVE) {
+                    const name = pro.name
+                    if (directives.indexOf(name) > 0) {
+                        return pro.name
+                    }
+                }
+            }
+        }
+    }
+
+    parseIfCondition(allIfOut: OutStream, nodes: ElementNode[]) {
+        allIfOut.write(`\${(()=>{`);
+        console.log(nodes.length)
+        nodes.forEach((node) => {
+            if (node.props) {
+                for (var pro of node.props) {
+                    let name = pro.name
+                    let childOut = new OutStream();
+                    parseManager.getParseByType(node.type).parse(childOut, node as ElementNode)
+                    if (pro.type == NodeTypes.DIRECTIVE) {
+                        if (name == "if" || name == "else" || name == "else-if") {
+                            if (name == "else-if") {
+                                name = "else if"
+                            }
+                            let exp = pro.exp
+                            allIfOut.write(`${name}(`)
+                            let type = exp.type;
+                            parseManager.getParseByType(type).parse(allIfOut, exp)
+                            allIfOut.write(")\n{")
+                            allIfOut.write("return ")
+                            allIfOut.writeLn("`" + childOut.toString() + "`");
+                            allIfOut.write('}');
+                        }
+                    }
+                }
+
+            }
+        })
+        allIfOut.write('return \'\'})()}');
     }
 
     parseIf(out: OutStream, exp: SimpleExpressionNode) {

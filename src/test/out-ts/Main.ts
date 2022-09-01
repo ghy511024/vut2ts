@@ -13,15 +13,15 @@ var tmpData=data||{}
         }
     )(str, data);
 `)
-const _tmp= {
-  name: "Main",
-  setup(obj) {
-    return {
-      isTrue: obj["isTrue"],
-      array: obj["array"],
-      message: obj["message"]
-    };
-  },
+const _tmp = {
+    name: "Main",
+    setup(obj) {
+        return {
+            isTrue: obj["isTrue"],
+            array: obj["array"],
+            message: obj["message"]
+        };
+    },
 };
 
 export default {
@@ -32,11 +32,20 @@ export default {
         Object.assign(this, data);
     },
     toString() {
-        let str = `  ${(()=>{if(this.ghyFun('isTrue',this)){return `<div class='xixi'></div>`
-}return ''})()}
-  <div class='haha'>    666666666
-  </div>
-`
+        let str = `<template>  ${(() => {
+            if (this.ghyFun('isTrue', this)) {
+                return `<div class='xixi'></div>`
+            } else if (this.ghyFun('isTrue', this)) {
+                return `<div class='haha'></div>`
+            } else (this.ghyFun('isTrue', this))
+            {
+                return `<div class='hehe'>    666666666
+  </div>`
+            }
+            return ''
+        })()}
+
+</template>`
         return str
     }
 };
