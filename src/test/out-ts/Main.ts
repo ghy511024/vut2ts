@@ -32,9 +32,19 @@ export default {
         Object.assign(this, data);
     },
     toString() {
-        let str = `<template>  ${(() => {
+        let str = `  ${(() => {
             if (this.ghyFun('isTrue', this)) {
-                return `<div class='xixi'></div>`
+                var str = "";
+                let _tmpItem;
+                if (this['item']) {
+                    _tmpItem = this['item']
+                }
+                this.ghyFun('array', this).forEach(item => {
+                    this['item'] = item;
+                    str += `<div class='xixi'>${this.ghyFun('item', this)}</div>`
+                });
+                this['item'] = _tmpItem;
+                return str;
             } else if (this.ghyFun('isTrue', this)) {
                 return `<div class='haha'></div>`
             } else (this.ghyFun('isTrue', this))
@@ -45,7 +55,22 @@ export default {
             return ''
         })()}
 
-</template>`
+  ${(() => {
+            var str = "";
+            let _tmpItem;
+            if (this['item']) {
+                _tmpItem = this['item']
+            }
+            this.ghyFun('array', this).forEach(item => {
+                this['item'] = item;
+                str += `<div>123123</div>`
+            });
+            this['item'] = _tmpItem;
+
+            return str
+        })()}
+  <div>5555555555</div>
+`
         return str
     }
 };

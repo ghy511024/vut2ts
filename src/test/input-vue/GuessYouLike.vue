@@ -39,6 +39,7 @@
 <script lang="ts">
 import {House} from "../bean/House"
 
+let x: number = 123;
 export default {
   setup(ctx: {
     cateId: number
