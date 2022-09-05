@@ -77,9 +77,13 @@ var tmpData=data||{}
 export default {
     ghyFun: fun,
     setup(${this.setupParam ? this.setupParam : "ctx"}) {
+        let data = {}
+        if (typeof _tmp["data"]=="function"){
+            data = _tmp["data"]();
+        } 
         // @ts-ignore
-        let data = _tmp.setup(...arguments);
-        Object.assign(this, data);
+        let setupData = _tmp.setup(...arguments);
+        Object.assign(this, data, setupData);
     },
     toString() {
         let str = \`${templateStr}\`

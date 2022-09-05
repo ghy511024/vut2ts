@@ -18,6 +18,7 @@ const _tmp = {
     setup(obj) {
         return {
             isTrue: obj["isTrue"],
+            ghy: '123',
             array: obj["array"],
             message: obj["message"]
         };
@@ -27,9 +28,13 @@ const _tmp = {
 export default {
     ghyFun: fun,
     setup(obj) {
+        let data = {}
+        if (typeof _tmp["data"] == "function") {
+            data = _tmp["data"]();
+        }
         // @ts-ignore
-        let data = _tmp.setup(...arguments);
-        Object.assign(this, data);
+        let setupData = _tmp.setup(...arguments);
+        Object.assign(this, data, setupData);
     },
     toString() {
         let str = `  ${(() => {
@@ -41,15 +46,15 @@ export default {
                 }
                 this.ghyFun('array', this).forEach(item => {
                     this['item'] = item;
-                    str += `<div class='xixi'>${this.ghyFun('item', this)}</div>`
+                    str += `<div>${this.ghyFun('item', this)}</div>`
                 });
                 this['item'] = _tmpItem;
                 return str;
             } else if (this.ghyFun('isTrue', this)) {
-                return `<div class='haha'></div>`
+                return `<div></div>`
             } else (this.ghyFun('isTrue', this))
             {
-                return `<div class='hehe'>    666666666
+                return `<div>    666666666
   </div>`
             }
             return ''
@@ -69,7 +74,9 @@ export default {
 
             return str
         })()}
-  <div>5555555555</div>
+  <div message="${this.ghyFun('message', this)}">5555555555</div>
+  <div class="${(this.ghyFun('isTrue', this) ? 'name' : '') + ' ' + (this.ghyFun('123', this) ? 'name2' : '') + ' ' + (this.ghyFun('123', this) ? 'name2' : '') + ' ' + (this.ghyFun('ghy=="123"', this) ? 'isghy' : '')}">ccc
+  </div>
 `
         return str
     }

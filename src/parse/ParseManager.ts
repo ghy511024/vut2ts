@@ -53,6 +53,7 @@ export class ParseManager {
                 return this.attributeParse;
                 break;
             case NodeTypes.DIRECTIVE:
+                console.log("123123")
                 return this.directiveParse;
                 break;
             default:

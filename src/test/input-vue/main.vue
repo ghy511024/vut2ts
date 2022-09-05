@@ -5,7 +5,14 @@
     666666666
   </div>
   <div v-for="item in array">123123</div>
-  <div>5555555555</div>
+  <div :message="message">5555555555</div>
+  <div :class="{
+    name:isTrue,
+    name2:123,
+    name2:123,
+    isghy:ghy=='123',
+  }">ccc
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,6 +21,7 @@ export default {
   setup(obj) {
     return {
       isTrue: obj["isTrue"],
+      ghy: '123',
       array: obj["array"],
       message: obj["message"]
     };

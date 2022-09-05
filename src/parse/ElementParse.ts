@@ -24,7 +24,7 @@ export class ElementParse extends BaseParse {
             if (props && props.length) {
                 for (var pro of props) {
                     // 处理非指令 属性
-                    if (pro.type != NodeTypes.DIRECTIVE) {
+                    if (!this.isIFDirective(node as ElementNode)) {
                         parseManager.getParseByType(pro.type).parse(tmpOut, pro)
                     }
                 }
@@ -88,7 +88,6 @@ export class ElementParse extends BaseParse {
 
     parseIfCondition(allIfOut: OutStream, nodes: ElementNode[]) {
         allIfOut.write(`\${(()=>{`);
-        console.log(nodes.length)
         nodes.forEach((node) => {
             if (node.props) {
                 let pType = 0;
@@ -113,10 +112,14 @@ export class ElementParse extends BaseParse {
                     name = "else if"
                 }
                 let exp = ifPro.exp
-                allIfOut.write(`${name}(`)
-                let type = exp.type;
-                parseManager.getParseByType(type).parse(allIfOut, exp)
-                allIfOut.write(")\n{")
+                allIfOut.write(`${name}`)
+                if (exp) {
+                    let type = exp.type;
+                    allIfOut.write(`(`)
+                    parseManager.getParseByType(type).parse(allIfOut, exp)
+                    allIfOut.writeLn(")")
+                }
+                allIfOut.writeLn("{")
                 if (pType == 3) {
                     let forOut = this.parseForCondition(childOut, forPro.exp)
                     allIfOut.write(forOut.toString())

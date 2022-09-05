@@ -11,6 +11,12 @@ export class ExpressionParse extends BaseParse {
     parse(out: OutStream, node: SimpleExpressionNode) {
         let content = node.content;
         content = content.replace(/\'/g, '"')
-        out.write(`this.ghyFun('${content}',this)`)
+        content = content.replace(/[\r\n\s]/g, '')
+        if (node.isStatic) {
+            out.write(`${content}`)
+        } else {
+            out.write(`this.ghyFun('${content}',this)`)
+        }
+
     }
 }

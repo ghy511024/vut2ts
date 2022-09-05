@@ -12,7 +12,7 @@ import {OutStream} from "../writer/OutStream";
 
 /**
  * create by ghy 2022/8/23 18:58
- * @desc 属性解析 此文件用不着，在节点层处理了
+ * @desc 属性解析
  */
 export class DirectiveParse extends BaseParse {
     parse(out: OutStream, node: DirectiveNode) {
@@ -20,41 +20,44 @@ export class DirectiveParse extends BaseParse {
         const type = node.type
         let str
         if (name == "if") {
-            str = this.parseIf(out, node.exp as SimpleExpressionNode);
+            // 已在外层处理
         } else if (name == "for") {
-            str = this.parseFor(out, node.exp as SimpleExpressionNode);
+            // 已在外层处理
+        } else if (name == "bind") {
+            this.parseBind(out, node)
         }
         return str;
     }
 
-    parseIf(out: OutStream, exp: SimpleExpressionNode) {
-
-        let tmpOut = new OutStream();
-        tmpOut.write(`\${(()=>{if(`)
-        let type = exp.type;
-        parseManager.getParseByType(type).parse(tmpOut, exp)
-        tmpOut.write("){")
-        tmpOut.writeLn("return ")
-        tmpOut.writeLn(out.toString());
-        tmpOut.write('}})()}');
-        out = tmpOut;
-    }
-
-    parseFor(out: OutStream, exp: SimpleExpressionNode) {
-        let type = exp.type; // 4
-        let content = exp.content; // (item,index) in array
-        let array = content.split(" in ");
-        exp.content = array[1]
-        let tmpOut = new OutStream();
-        tmpOut.write(`\${(()=>{ 
-        var str = "";`)
-        parseManager.getParseByType(type).parse(tmpOut, exp);
-        tmpOut.writeLn(`.forEach(${array[0]}=>{)`)
-        tmpOut.writeLn(out.toString())
-        tmpOut.writeLn("}; return str})()}");
-
-        out = tmpOut;
-        console.log(out.toString())
+    parseBind(out: OutStream, node: DirectiveNode) {
+        out.write(` `)
+        parseManager.getParseByType(node.arg.type).parse(out, node.arg as SimpleExpressionNode)
+        out.write(`="\${`)
+        let content = node.exp["content"]
+        content = content.replace(/[\r\n\s]/g, '')
+        if (/^{[\S\s]*?\}/.test(content)) {
+            content = content.replace(/[\{\}]/g, "")
+            const array = content.split(",")
+            for (var i = 0; i < array.length; i++) {
+                let item = array[i];
+                let rt = (item as string).split(":");
+                if (rt.length == 2) {
+                    if (i >= 1) {
+                        out.write(`+' '+`)
+                    }
+                    let expNodeKey = {content: rt[0], isStatic: true}
+                    let expNodeValue = {content: rt[1], isStatic: false}
+                     out.write(`(`)
+                    parseManager.getParseByType(node.exp.type).parse(out, expNodeValue as SimpleExpressionNode)
+                    out.write(`?'`)
+                    parseManager.getParseByType(node.exp.type).parse(out, expNodeKey as SimpleExpressionNode)
+                    out.write(`':'')`)
+                }
+            }
+        } else {
+            parseManager.getParseByType(node.exp.type).parse(out, node.exp as SimpleExpressionNode)
+        }
+        out.write(`}"`)
     }
 
 }

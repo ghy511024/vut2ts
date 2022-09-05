@@ -14,7 +14,7 @@
         <p class="title" :class="{'title-line2':cateId==15&&(!item.tagsV2||item.tagsV2.length==0)}">{{ item.title }}</p>
         <p class="place">{{ item.address }}</p>
         <p v-if="item.type=='3'" class="plant-address">{{ item.address }}</p>
-        <p v-if="item.type!='3'" class="tips">
+        <p v-else class="tips">
           <span v-if="item.anXuan" class="tag anxuan">安选</span>
           <span v-if="item.shiPai" class="tag anxuan-photograph">
                             <span class="anxuan">安选</span>
@@ -26,7 +26,6 @@
                        {{ tag.title }}
           </span>
         </p>
-
         <p class=" price">
           <b>{{ item.priceVO.num }}</b>{{ item.priceVO.num != '面议' ? item.priceVO.unit : '' }}
           <span class="area">{{ item.mianJi }}㎡</span>
@@ -34,6 +33,7 @@
       </div>
     </a>
   </li>
+  <div :name="xxx"></div>
 </template>
 
 <script lang="ts">
@@ -41,6 +41,11 @@ import {House} from "../bean/House"
 
 let x: number = 123;
 export default {
+  data() {
+    return {
+      isLine2: "sss"
+    }
+  },
   setup(ctx: {
     cateId: number
   }, houseList: House[]) {
