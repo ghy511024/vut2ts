@@ -1,57 +1,42 @@
-import {ElementNode, NodeTypes, TemplateChildNode, TemplateNode} from "@vue/compiler-core";
-import {parseManager} from "./parse/ParseManager";
-import {OutStream} from "./writer/OutStream";
-import {SFCDescriptor, SFCScriptBlock} from "@vue/compiler-sfc";
-
-/**
- * create by ghy 2022/8/23 16:18
- * @desc
- */
-export class TemplateGenerate {
-    ast: ElementNode
-    scriptSFC: SFCScriptBlock
-    out: OutStream
-    setupParam: string
-
-    constructor(sfc: SFCDescriptor) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateGenerate = void 0;
+const ParseManager_1 = require("./parse/ParseManager");
+const OutStream_1 = require("./writer/OutStream");
+class TemplateGenerate {
+    constructor(sfc) {
         this.ast = sfc.template.ast;
         this.scriptSFC = sfc.script;
-        this.out = new OutStream();
+        this.out = new OutStream_1.OutStream();
     }
-
     main() {
         this.writeFun();
         this.parseTsSource();
         this.writeMain();
         return this.out.toString();
     }
-
     getTemplateStr() {
-        let ast = this.ast
+        let ast = this.ast;
         if (!ast) {
-            return ""
+            return "";
         }
-        let array = []
-        const out = new OutStream();
-        parseManager.getParseByType(ast.type).parse(out, ast)
+        let array = [];
+        const out = new OutStream_1.OutStream();
+        ParseManager_1.parseManager.getParseByType(ast.type).parse(out, ast);
         return out.toString();
     }
-
     parseTsSource() {
         let str = this.scriptSFC.content;
-        let setupParam
+        let setupParam;
         str.replace(/setup\(([\s\S]*?)\)/, (ALL, $1) => {
             this.setupParam = $1;
-            return ""
-        })
-        str = str.replace(/export\s+default\s/gi, "const _tmp= ")
-        this.out.write(str)
+            return "";
+        });
+        str = str.replace(/export\s+default\s/gi, "const _tmp= ");
+        this.out.write(str);
     }
-
     parseTemplate() {
-
     }
-
     writeFun() {
         const str = `let fun = new Function("str", "data", \`
 return (function (str, data) {
@@ -67,10 +52,9 @@ var tmpData=data||{}
             return  tmp
         }
     )(str, data);
-\`)`
+\`)`;
         this.out.write(str);
     }
-
     writeMain() {
         const templateStr = this.getTemplateStr();
         const str = `
@@ -97,6 +81,6 @@ export default {
 `;
         this.out.write(str);
     }
-
-
 }
+exports.TemplateGenerate = TemplateGenerate;
+//# sourceMappingURL=TemplateGenertor.js.map

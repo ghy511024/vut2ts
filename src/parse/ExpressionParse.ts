@@ -15,7 +15,7 @@ export class ExpressionParse extends BaseParse {
         if (node.isStatic) {
             out.write(`${content}`)
         } else {
-            out.write(`this.ghyFun('${content}',this)`)
+            out.write(`this.expData('${content}',this)`)
         }
 
     }
