@@ -30,9 +30,8 @@ export class House {
     shiKan: boolean
     shiPai: boolean
     shiPin: boolean
-    tagsV2: { borderColor: string, textColor: string, title: string ,bgColor?:string}[]
+    tagsV2: { borderColor: string, textColor: string, title: string, bgColor?: string }[]
     title: string
     type: string
     url: string
-
 }

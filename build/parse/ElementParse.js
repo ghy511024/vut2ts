@@ -21,7 +21,12 @@ class ElementParse extends BaseParse_1.BaseParse {
                     }
                 }
             }
-            tmpOut.write(">");
+            if (this.isSingTag(tag)) {
+                tmpOut.write("/>");
+            }
+            else {
+                tmpOut.write(">");
+            }
         }
         let ifStart = false;
         const children = node.children;
@@ -57,7 +62,9 @@ class ElementParse extends BaseParse_1.BaseParse {
             }
         }
         if (tag != "template") {
-            tmpOut.write(`</${tag}>`);
+            if (!this.isSingTag(tag)) {
+                tmpOut.write(`</${tag}>`);
+            }
         }
         out.write(tmpOut.toString());
     }
@@ -179,6 +186,12 @@ class ElementParse extends BaseParse_1.BaseParse {
             item: item,
             index: index
         };
+    }
+    isSingTag(tag) {
+        if (/^(img|hr|br)$/.test(tag)) {
+            return true;
+        }
+        return false;
     }
 }
 exports.ElementParse = ElementParse;

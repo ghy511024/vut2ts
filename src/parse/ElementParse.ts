@@ -20,6 +20,7 @@ export class ElementParse extends BaseParse {
         let tmpOut = new OutStream();
 
         if (tag != "template") {
+
             tmpOut.write(`<${tag}`)
             if (props && props.length) {
                 for (var pro of props) {
@@ -29,7 +30,12 @@ export class ElementParse extends BaseParse {
                     }
                 }
             }
-            tmpOut.write(">");
+            if (this.isSingTag(tag)) {
+                tmpOut.write("/>");
+            } else {
+                tmpOut.write(">");
+            }
+
         }
         let ifStart = false;
         const children = node.children;
@@ -63,7 +69,10 @@ export class ElementParse extends BaseParse {
             }
         }
         if (tag != "template") {
-            tmpOut.write(`</${tag}>`);
+            if (!this.isSingTag(tag)) {
+                tmpOut.write(`</${tag}>`);
+            }
+
         }
         out.write(tmpOut.toString());
     }
@@ -196,5 +205,12 @@ export class ElementParse extends BaseParse {
             item: item,
             index: index
         }
+    }
+
+    private isSingTag(tag: string) {
+        if (/^(img|hr|br)$/.test(tag)) {
+            return true;
+        }
+        return false;
     }
 }
