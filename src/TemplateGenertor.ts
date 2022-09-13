@@ -53,21 +53,23 @@ export class TemplateGenerate {
     }
 
     writeFun() {
-        const str = `let fun = new Function("str", "data", \`
+        let str = `let fun = new Function("str", "data", \`
 return (function (str, data) {
-var tmpData=data||{}
+var tmpData=data||{};
         var tmp="";
             with (tmpData) {
                 try {
                     tmp = eval(str);
                 } catch (e) {
-                    console.warn(str +"not exits in data",data,"\\\\n",new Error(e));
+                    console.warn(str +"not exits in data","\\\\n",new Error(e));
                 }
             }
-            return  tmp
+            return  tmp;
         }
     )(str, data);
 \`)`
+        str = str.replace(/[\r\n]/g, '')
+        str = str.replace(/\s{2,}/g, ' ')
         this.out.write(str);
     }
 

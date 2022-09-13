@@ -1,20 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let fun = new Function("str", "data", `
-return (function (str, data) {
-var tmpData=data||{}
-        var tmp="";
-            with (tmpData) {
-                try {
-                    tmp = eval(str);
-                } catch (e) {
-                    console.warn(str +"not exits in data",data,"\\n",new Error(e));
-                }
-            }
-            return  tmp
-        }
-    )(str, data);
-`);
+let fun = new Function("str", "data", `return (function (str, data) {var tmpData=data||{}; var tmp=""; with (tmpData) { try { tmp = eval(str); } catch (e) { console.warn(str +"not exits in data","\\n",new Error(e)); } } return tmp; } )(str, data);`);
 const _tmp = {
     data() {
         return {};
@@ -79,7 +65,6 @@ exports.default = {
                 })()}
 
       </div>
-
       <div class='desc'>        <p class="${(this.expData('true', this) ? 'title' : '') + ' ' + (this.expData('isLine2(item)', this) ? '"title-line2"' : '')}">${this.expData('item.title', this)}</p>
         <p class='place'>${this.expData('item.address', this)}</p>
         ${(() => {

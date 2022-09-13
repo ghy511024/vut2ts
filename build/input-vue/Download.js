@@ -1,20 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let fun = new Function("str", "data", `
-return (function (str, data) {
-var tmpData=data||{}
-        var tmp="";
-            with (tmpData) {
-                try {
-                    tmp = eval(str);
-                } catch (e) {
-                    console.warn(str +"not exits in data",data,"\\n",new Error(e));
-                }
-            }
-            return  tmp
-        }
-    )(str, data);
-`);
+let fun = new Function("str", "data", `return (function (str, data) {var tmpData=data||{}; var tmp=""; with (tmpData) { try { tmp = eval(str); } catch (e) { console.warn(str +"not exits in data","\\n",new Error(e)); } } return tmp; } )(str, data);`);
 const _tmp = {
     setup(ctx, appInfo) {
         let version = appInfo.android_version;
