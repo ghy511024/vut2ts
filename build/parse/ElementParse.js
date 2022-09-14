@@ -17,7 +17,7 @@ class ElementParse extends BaseParse_1.BaseParse {
             if (props && props.length) {
                 this.preHandClass(props);
                 for (var pro of props) {
-                    if (!this.isIFDirective(node)) {
+                    if (!this.isBindDirective(pro)) {
                         ParseManager_1.parseManager.getParseByType(pro.type).parse(tmpOut, pro);
                     }
                 }
@@ -68,6 +68,18 @@ class ElementParse extends BaseParse_1.BaseParse {
             }
         }
         out.write(tmpOut.toString());
+    }
+    isBindDirective(pro) {
+        const directives = ["if", "else", "else-if"];
+        if (pro.type == 7) {
+            const name = pro.name;
+            if (directives.indexOf(name) >= 0) {
+                return pro.name;
+            }
+            else if (name == "for") {
+                return "for";
+            }
+        }
     }
     isIFDirective(node) {
         if (node.props) {

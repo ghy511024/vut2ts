@@ -30,7 +30,7 @@ export class ElementParse extends BaseParse {
                 this.preHandClass(props);
                 for (var pro of props) {
                     // 处理非指令 属性
-                    if (!this.isIFDirective(node as ElementNode)) {
+                    if (!this.isBindDirective(pro)) {
                         parseManager.getParseByType(pro.type).parse(tmpOut, pro)
                     }
                 }
@@ -80,6 +80,18 @@ export class ElementParse extends BaseParse {
 
         }
         out.write(tmpOut.toString());
+    }
+
+    isBindDirective(pro: AttributeNode | DirectiveNode) {
+        const directives = ["if", "else", "else-if"]
+        if (pro.type == NodeTypes.DIRECTIVE) {
+            const name = pro.name
+            if (directives.indexOf(name) >= 0) {
+                return pro.name
+            } else if (name == "for") {
+                return "for"
+            }
+        }
     }
 
     // 是否包含指令

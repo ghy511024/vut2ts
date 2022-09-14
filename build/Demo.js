@@ -36,18 +36,18 @@ exports.default = {
                 }
                 this.expData('array', this).forEach(item => {
                     this['item'] = item;
-                    str += `<div>${this.expData('item', this)}</div>`;
+                    str += `<div class='xixi'>${this.expData('item', this)}</div>`;
                 });
                 this['item'] = _tmpItem;
                 return str;
             }
             else if (this.expData('isTrue', this)) {
-                return `<div></div>`;
+                return `<div class='haha'></div>`;
             }
             else
                 (this.expData('isTrue', this));
             {
-                return `<div>    666666666
+                return `<div class='hehe'>    666666666
   </div>`;
             }
             return '';
