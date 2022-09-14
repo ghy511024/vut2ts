@@ -31,7 +31,7 @@ export default {
     toString() {
         let str = `  <div class='download-head-index'>    <div class='OpenInAppBarWrap_tip'>      <div class='tip_content content_start'>        <i>${this.expData('appInfo.version_text',this)}：${this.expData('version',this)}</i>
         <i>${this.expData('appInfo.developer_text',this)}：${this.expData('appInfo.developer_info',this)}</i>
-        <br></br>
+        <br/>
         <i>${this.expData('appInfo.update_time_text',this)}：${this.expData('updateTime',this)}</i>
         <a href="${this.expData('appInfo.policy_link',this)}" target='_blank' class='underline'>${this.expData('appInfo.policy_text',this)}</a>
         <i class='underline show-rights'>应用权限</i>

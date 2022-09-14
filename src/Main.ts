@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import {parse} from "@vue/compiler-sfc";
-import {TemplateGenerate} from "./TemplateGenertor";
+import {TemplateGenerate} from "./genertor/TemplateGenertor";
 import {File} from "./bean/File";
 
 /**
@@ -82,7 +82,6 @@ export class Main {
             tmpFile.fileDir = path.dirname(fullPath);
             tmpFile.fileName = fileName;
             tmpFile.fullPath = fullPath;
-            console.log(path.dirname(fullPath), dir.lastIndexOf('/') + 1)
             callBack(tmpFile);
         }
     }

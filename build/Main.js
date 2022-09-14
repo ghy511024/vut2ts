@@ -7,7 +7,7 @@ exports.Main = void 0;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const compiler_sfc_1 = require("@vue/compiler-sfc");
-const TemplateGenertor_1 = require("./TemplateGenertor");
+const TemplateGenertor_1 = require("./genertor/TemplateGenertor");
 const File_1 = require("./bean/File");
 class Main {
     constructor(cwd, file, outRoot) {
@@ -73,7 +73,6 @@ class Main {
             tmpFile.fileDir = path_1.default.dirname(fullPath);
             tmpFile.fileName = fileName;
             tmpFile.fullPath = fullPath;
-            console.log(path_1.default.dirname(fullPath), dir.lastIndexOf('/') + 1);
             callBack(tmpFile);
         }
     }

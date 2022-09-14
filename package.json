@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "main": "dist/Main.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vue2ts src"
   },
   "bin": {
     "vue2ts": "bin/vue2ts.js"

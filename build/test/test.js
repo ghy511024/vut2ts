@@ -25,28 +25,20 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const compiler_sfc_1 = require("@vue/compiler-sfc");
 const fs = __importStar(require("fs"));
-const TemplateGenertor_1 = require("../TemplateGenertor");
+const TemplateGenertor_1 = require("../genertor/TemplateGenertor");
 const path = __importStar(require("path"));
 const option = {
     main: {
         file: "./input-vue/main.vue",
         out: "./out-ts/Main.ts",
     },
-    download: {
-        file: "E:\\develop\\workespace\\58git_site\\58_web_js\\sydc-m-site\\src\\components-wuba\\DownloadAppCard\\template\\DownloadTemp.vue",
-        out: "E:\\develop\\workespace\\58git_site\\58_web_js\\sydc-m-site\\src\\components-wuba\\DownloadAppCard\\template\\DownloadTemp.ts",
-    },
-    ajkDownload: {
-        file: "E:\\develop\\workespace\\58git_site\\ajk_web_js\\m-ajk-business\\src\\component\\download\\template\\DownloadBanner.vue",
-        out: "E:\\develop\\workespace\\58git_site\\ajk_web_js\\m-ajk-business\\src\\component\\download\\template\\DownloadBanner.ts",
-    }
 };
 (() => {
-    const file = fs.readFileSync(path.join(option.ajkDownload.file));
+    const file = fs.readFileSync(path.join(option.main.file));
     const { descriptor } = (0, compiler_sfc_1.parse)(file.toString());
     fs.writeFileSync('haha.json', JSON.stringify(descriptor.template.ast, null, 2));
     const generate = new TemplateGenertor_1.TemplateGenerate(descriptor);
     let htmlStr = generate.main();
-    fs.writeFileSync(path.join(option.ajkDownload.out), htmlStr);
+    fs.writeFileSync(path.join(option.main.out), htmlStr);
 })();
 //# sourceMappingURL=test.js.map

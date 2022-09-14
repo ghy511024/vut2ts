@@ -16,11 +16,8 @@ export class ElementParse extends BaseParse {
         let for_Out: OutStream;
         let if_Out: OutStream;
         const props = node.props;
-
         let tmpOut = new OutStream();
-
         if (tag != "template") {
-
             tmpOut.write(`<${tag}`)
             if (props && props.length) {
                 for (var pro of props) {

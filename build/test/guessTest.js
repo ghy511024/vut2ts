@@ -25,7 +25,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const compiler_sfc_1 = require("@vue/compiler-sfc");
 const fs = __importStar(require("fs"));
-const TemplateGenertor_1 = require("../TemplateGenertor");
+const TemplateGenertor_1 = require("../genertor/TemplateGenertor");
 const path = __importStar(require("path"));
 (() => {
     const file = fs.readFileSync(path.join(__dirname, "./input-vue/GuessYouLike.vue"));
