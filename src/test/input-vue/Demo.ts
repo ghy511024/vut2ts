@@ -53,7 +53,7 @@ this['item']=_tmpItem;
 
 return str})()}
   <div message="${this.expData('message',this)}">5555555555</div>
-  <div class="${(this.expData('isTrue',this)?'name':'')+' '+(this.expData('123',this)?'name2':'')+' '+(this.expData('123',this)?'name2':'')+' '+(this.expData('ghy=="123"',this)?'isghy':'')}">ccc
+  <div class="${(this.expData('true',this)?'oldClass':'')+' '+(this.expData('isTrue',this)?'name':'')+' '+(this.expData('123',this)?'name2':'')+' '+(this.expData('123',this)?'name2':'')+' '+(this.expData('ghy=="123"',this)?'isghy':'')}">ccc
   </div>
 `
         return str

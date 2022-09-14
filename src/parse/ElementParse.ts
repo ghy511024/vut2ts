@@ -3,7 +3,14 @@
  * @desc
  */
 import {BaseParse} from "./BaseParse";
-import {BaseElementNode, ElementNode, NodeTypes, SimpleExpressionNode, TemplateNode} from "@vue/compiler-core";
+import {
+    AttributeNode,
+    BaseElementNode, DirectiveNode,
+    ElementNode, ExpressionNode,
+    NodeTypes,
+    SimpleExpressionNode,
+    TemplateNode
+} from "@vue/compiler-core";
 import {parseManager} from "./ParseManager";
 import {OutStream} from "../writer/OutStream";
 
@@ -20,6 +27,7 @@ export class ElementParse extends BaseParse {
         if (tag != "template") {
             tmpOut.write(`<${tag}`)
             if (props && props.length) {
+                this.preHandClass(props);
                 for (var pro of props) {
                     // 处理非指令 属性
                     if (!this.isIFDirective(node as ElementNode)) {
@@ -141,8 +149,6 @@ export class ElementParse extends BaseParse {
     }
 
     parseFor(out: OutStream, node: ElementNode) {
-
-
         if (node.props) {
             for (var pro of node.props) {
                 if (pro.type == NodeTypes.DIRECTIVE && pro.name == "for") {
@@ -209,5 +215,34 @@ export class ElementParse extends BaseParse {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 预处理 class 属性，避免 class 与 :class 冲突
+     * */
+    preHandClass(props: Array<AttributeNode | DirectiveNode>) {
+        let isHaveClass = false;
+        let isHaveBindClass = false;
+        let staticClass = ""
+        let classPro
+        for (var pro of props) {
+            if (pro.type == 6 && pro.name == "class") {
+                isHaveClass = true;
+                staticClass = pro.value.content;
+                classPro = pro;
+            }
+        }
+
+        for (var pro of props) {
+            if (isHaveClass && pro.type == 7 && pro.name == "bind" && pro.arg && pro.arg["content"] == "class") {
+                isHaveBindClass = true;
+                let content = (pro.exp as SimpleExpressionNode).content;
+                content = content.replace(/\{/, `{${staticClass}:true,`);
+                (pro.exp as SimpleExpressionNode).content = content;
+            }
+        }
+        if (isHaveBindClass && isHaveClass) {
+            props.splice(props.indexOf(classPro), 1)
+        }
     }
 }

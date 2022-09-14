@@ -15,6 +15,7 @@ class ElementParse extends BaseParse_1.BaseParse {
         if (tag != "template") {
             tmpOut.write(`<${tag}`);
             if (props && props.length) {
+                this.preHandClass(props);
                 for (var pro of props) {
                     if (!this.isIFDirective(node)) {
                         ParseManager_1.parseManager.getParseByType(pro.type).parse(tmpOut, pro);
@@ -192,6 +193,30 @@ class ElementParse extends BaseParse_1.BaseParse {
             return true;
         }
         return false;
+    }
+    preHandClass(props) {
+        let isHaveClass = false;
+        let isHaveBindClass = false;
+        let staticClass = "";
+        let classPro;
+        for (var pro of props) {
+            if (pro.type == 6 && pro.name == "class") {
+                isHaveClass = true;
+                staticClass = pro.value.content;
+                classPro = pro;
+            }
+        }
+        for (var pro of props) {
+            if (isHaveClass && pro.type == 7 && pro.name == "bind" && pro.arg && pro.arg["content"] == "class") {
+                isHaveBindClass = true;
+                let content = pro.exp.content;
+                content = content.replace(/\{/, `{${staticClass}:true,`);
+                pro.exp.content = content;
+            }
+        }
+        if (isHaveBindClass && isHaveClass) {
+            props.splice(props.indexOf(classPro), 1);
+        }
     }
 }
 exports.ElementParse = ElementParse;

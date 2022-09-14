@@ -29,16 +29,16 @@ const TemplateGenertor_1 = require("../genertor/TemplateGenertor");
 const path = __importStar(require("path"));
 const option = {
     main: {
-        file: "./input-vue/main.vue",
-        out: "./out-ts/Main.ts",
+        file: "./input-vue/Demo.vue",
+        out: "./input-vue/Demo.ts",
     },
 };
 (() => {
-    const file = fs.readFileSync(path.join(option.main.file));
+    const file = fs.readFileSync(path.join(__dirname, option.main.file));
     const { descriptor } = (0, compiler_sfc_1.parse)(file.toString());
     fs.writeFileSync('haha.json', JSON.stringify(descriptor.template.ast, null, 2));
     const generate = new TemplateGenertor_1.TemplateGenerate(descriptor);
     let htmlStr = generate.main();
-    fs.writeFileSync(path.join(option.main.out), htmlStr);
+    fs.writeFileSync(path.join(__dirname, option.main.out), htmlStr);
 })();
 //# sourceMappingURL=test.js.map

@@ -34,7 +34,7 @@
           "name": "class",
           "value": {
             "type": 2,
-            "content": "OpenInAppBarAppInfoWrap",
+            "content": "xixi",
             "loc": {
               "start": {
                 "column": 14,
@@ -42,11 +42,11 @@
                 "offset": 25
               },
               "end": {
-                "column": 39,
+                "column": 20,
                 "line": 2,
-                "offset": 50
+                "offset": 31
               },
-              "source": "\"OpenInAppBarAppInfoWrap\""
+              "source": "\"xixi\""
             }
           },
           "loc": {
@@ -56,1378 +56,123 @@
               "offset": 19
             },
             "end": {
-              "column": 39,
+              "column": 20,
               "line": 2,
-              "offset": 50
+              "offset": 31
             },
-            "source": "class=\"OpenInAppBarAppInfoWrap\""
+            "source": "class=\"xixi\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "if",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 27,
+                "line": 2,
+                "offset": 38
+              },
+              "end": {
+                "column": 33,
+                "line": 2,
+                "offset": 44
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 2,
+              "offset": 32
+            },
+            "end": {
+              "column": 34,
+              "line": 2,
+              "offset": 45
+            },
+            "source": "v-if=\"isTrue\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "for",
+          "exp": {
+            "type": 4,
+            "content": "item in array",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 42,
+                "line": 2,
+                "offset": 53
+              },
+              "end": {
+                "column": 55,
+                "line": 2,
+                "offset": 66
+              },
+              "source": "item in array"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 35,
+              "line": 2,
+              "offset": 46
+            },
+            "end": {
+              "column": 56,
+              "line": 2,
+              "offset": 67
+            },
+            "source": "v-for=\"item in array\""
           }
         }
       ],
       "isSelfClosing": false,
       "children": [
         {
-          "type": 2,
-          "content": "    ",
+          "type": 5,
+          "content": {
+            "type": 4,
+            "isStatic": false,
+            "constType": 0,
+            "content": "item",
+            "loc": {
+              "start": {
+                "column": 60,
+                "line": 2,
+                "offset": 71
+              },
+              "end": {
+                "column": 64,
+                "line": 2,
+                "offset": 75
+              },
+              "source": "item"
+            }
+          },
           "loc": {
             "start": {
-              "column": 40,
+              "column": 57,
               "line": 2,
-              "offset": 51
+              "offset": 68
             },
             "end": {
-              "column": 5,
-              "line": 3,
-              "offset": 57
+              "column": 67,
+              "line": 2,
+              "offset": 78
             },
-            "source": "\r\n    "
-          }
-        },
-        {
-          "type": 1,
-          "ns": 0,
-          "tag": "section",
-          "tagType": 0,
-          "props": [
-            {
-              "type": 6,
-              "name": "class",
-              "value": {
-                "type": 2,
-                "content": "home-header-version",
-                "loc": {
-                  "start": {
-                    "column": 20,
-                    "line": 3,
-                    "offset": 72
-                  },
-                  "end": {
-                    "column": 41,
-                    "line": 3,
-                    "offset": 93
-                  },
-                  "source": "\"home-header-version\""
-                }
-              },
-              "loc": {
-                "start": {
-                  "column": 14,
-                  "line": 3,
-                  "offset": 66
-                },
-                "end": {
-                  "column": 41,
-                  "line": 3,
-                  "offset": 93
-                },
-                "source": "class=\"home-header-version\""
-              }
-            }
-          ],
-          "isSelfClosing": false,
-          "children": [
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "span",
-              "tagType": 0,
-              "props": [],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "应用版本：v",
-                  "loc": {
-                    "start": {
-                      "column": 48,
-                      "line": 3,
-                      "offset": 100
-                    },
-                    "end": {
-                      "column": 54,
-                      "line": 3,
-                      "offset": 106
-                    },
-                    "source": "应用版本：v"
-                  }
-                },
-                {
-                  "type": 5,
-                  "content": {
-                    "type": 4,
-                    "isStatic": false,
-                    "constType": 0,
-                    "content": "appInfo.version",
-                    "loc": {
-                      "start": {
-                        "column": 57,
-                        "line": 3,
-                        "offset": 109
-                      },
-                      "end": {
-                        "column": 72,
-                        "line": 3,
-                        "offset": 124
-                      },
-                      "source": "appInfo.version"
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 54,
-                      "line": 3,
-                      "offset": 106
-                    },
-                    "end": {
-                      "column": 75,
-                      "line": 3,
-                      "offset": 127
-                    },
-                    "source": "{{ appInfo.version }}"
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 42,
-                  "line": 3,
-                  "offset": 94
-                },
-                "end": {
-                  "column": 82,
-                  "line": 3,
-                  "offset": 134
-                },
-                "source": "<span>应用版本：v{{ appInfo.version }}</span>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n      ",
-              "loc": {
-                "start": {
-                  "column": 82,
-                  "line": 3,
-                  "offset": 134
-                },
-                "end": {
-                  "column": 7,
-                  "line": 4,
-                  "offset": 142
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "i",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "home-header-version-separate",
-                    "loc": {
-                      "start": {
-                        "column": 16,
-                        "line": 4,
-                        "offset": 151
-                      },
-                      "end": {
-                        "column": 46,
-                        "line": 4,
-                        "offset": 181
-                      },
-                      "source": "\"home-header-version-separate\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 10,
-                      "line": 4,
-                      "offset": 145
-                    },
-                    "end": {
-                      "column": 46,
-                      "line": 4,
-                      "offset": 181
-                    },
-                    "source": "class=\"home-header-version-separate\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 4,
-                  "offset": 142
-                },
-                "end": {
-                  "column": 51,
-                  "line": 4,
-                  "offset": 186
-                },
-                "source": "<i class=\"home-header-version-separate\"></i>"
-              }
-            },
-            {
-              "type": 2,
-              "content": " ",
-              "loc": {
-                "start": {
-                  "column": 51,
-                  "line": 4,
-                  "offset": 186
-                },
-                "end": {
-                  "column": 52,
-                  "line": 4,
-                  "offset": 187
-                },
-                "source": " "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "span",
-              "tagType": 0,
-              "props": [],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "开发者：",
-                  "loc": {
-                    "start": {
-                      "column": 58,
-                      "line": 4,
-                      "offset": 193
-                    },
-                    "end": {
-                      "column": 62,
-                      "line": 4,
-                      "offset": 197
-                    },
-                    "source": "开发者："
-                  }
-                },
-                {
-                  "type": 5,
-                  "content": {
-                    "type": 4,
-                    "isStatic": false,
-                    "constType": 0,
-                    "content": "appInfo.developer",
-                    "loc": {
-                      "start": {
-                        "column": 65,
-                        "line": 4,
-                        "offset": 200
-                      },
-                      "end": {
-                        "column": 82,
-                        "line": 4,
-                        "offset": 217
-                      },
-                      "source": "appInfo.developer"
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 62,
-                      "line": 4,
-                      "offset": 197
-                    },
-                    "end": {
-                      "column": 85,
-                      "line": 4,
-                      "offset": 220
-                    },
-                    "source": "{{ appInfo.developer }}"
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 52,
-                  "line": 4,
-                  "offset": 187
-                },
-                "end": {
-                  "column": 92,
-                  "line": 4,
-                  "offset": 227
-                },
-                "source": "<span>开发者：{{ appInfo.developer }}</span>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n      ",
-              "loc": {
-                "start": {
-                  "column": 92,
-                  "line": 4,
-                  "offset": 227
-                },
-                "end": {
-                  "column": 7,
-                  "line": 5,
-                  "offset": 235
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "i",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "home-header-version-separate home-header-version-separate-left",
-                    "loc": {
-                      "start": {
-                        "column": 16,
-                        "line": 5,
-                        "offset": 244
-                      },
-                      "end": {
-                        "column": 80,
-                        "line": 5,
-                        "offset": 308
-                      },
-                      "source": "\"home-header-version-separate home-header-version-separate-left\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 10,
-                      "line": 5,
-                      "offset": 238
-                    },
-                    "end": {
-                      "column": 80,
-                      "line": 5,
-                      "offset": 308
-                    },
-                    "source": "class=\"home-header-version-separate home-header-version-separate-left\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 5,
-                  "offset": 235
-                },
-                "end": {
-                  "column": 85,
-                  "line": 5,
-                  "offset": 313
-                },
-                "source": "<i class=\"home-header-version-separate home-header-version-separate-left\"></i>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n      ",
-              "loc": {
-                "start": {
-                  "column": 85,
-                  "line": 5,
-                  "offset": 313
-                },
-                "end": {
-                  "column": 7,
-                  "line": 6,
-                  "offset": 321
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "span",
-              "tagType": 0,
-              "props": [],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "更新时间：",
-                  "loc": {
-                    "start": {
-                      "column": 13,
-                      "line": 6,
-                      "offset": 327
-                    },
-                    "end": {
-                      "column": 18,
-                      "line": 6,
-                      "offset": 332
-                    },
-                    "source": "更新时间："
-                  }
-                },
-                {
-                  "type": 5,
-                  "content": {
-                    "type": 4,
-                    "isStatic": false,
-                    "constType": 0,
-                    "content": "appInfo.updateTime",
-                    "loc": {
-                      "start": {
-                        "column": 21,
-                        "line": 6,
-                        "offset": 335
-                      },
-                      "end": {
-                        "column": 39,
-                        "line": 6,
-                        "offset": 353
-                      },
-                      "source": "appInfo.updateTime"
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 18,
-                      "line": 6,
-                      "offset": 332
-                    },
-                    "end": {
-                      "column": 42,
-                      "line": 6,
-                      "offset": 356
-                    },
-                    "source": "{{ appInfo.updateTime }}"
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 6,
-                  "offset": 321
-                },
-                "end": {
-                  "column": 49,
-                  "line": 6,
-                  "offset": 363
-                },
-                "source": "<span>更新时间：{{ appInfo.updateTime }}</span>"
-              }
-            },
-            {
-              "type": 2,
-              "content": " ",
-              "loc": {
-                "start": {
-                  "column": 49,
-                  "line": 6,
-                  "offset": 363
-                },
-                "end": {
-                  "column": 50,
-                  "line": 6,
-                  "offset": 364
-                },
-                "source": " "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "i",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "home-header-version-separate",
-                    "loc": {
-                      "start": {
-                        "column": 59,
-                        "line": 6,
-                        "offset": 373
-                      },
-                      "end": {
-                        "column": 89,
-                        "line": 6,
-                        "offset": 403
-                      },
-                      "source": "\"home-header-version-separate\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 53,
-                      "line": 6,
-                      "offset": 367
-                    },
-                    "end": {
-                      "column": 89,
-                      "line": 6,
-                      "offset": 403
-                    },
-                    "source": "class=\"home-header-version-separate\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [],
-              "loc": {
-                "start": {
-                  "column": 50,
-                  "line": 6,
-                  "offset": 364
-                },
-                "end": {
-                  "column": 94,
-                  "line": 6,
-                  "offset": 408
-                },
-                "source": "<i class=\"home-header-version-separate\"></i>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n      ",
-              "loc": {
-                "start": {
-                  "column": 94,
-                  "line": 6,
-                  "offset": 408
-                },
-                "end": {
-                  "column": 7,
-                  "line": 7,
-                  "offset": 416
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "span",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "i",
-                    "loc": {
-                      "start": {
-                        "column": 19,
-                        "line": 7,
-                        "offset": 428
-                      },
-                      "end": {
-                        "column": 22,
-                        "line": 7,
-                        "offset": 431
-                      },
-                      "source": "\"i\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 13,
-                      "line": 7,
-                      "offset": 422
-                    },
-                    "end": {
-                      "column": 22,
-                      "line": 7,
-                      "offset": 431
-                    },
-                    "source": "class=\"i\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "隐私政策",
-                  "loc": {
-                    "start": {
-                      "column": 23,
-                      "line": 7,
-                      "offset": 432
-                    },
-                    "end": {
-                      "column": 27,
-                      "line": 7,
-                      "offset": 436
-                    },
-                    "source": "隐私政策"
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 7,
-                  "offset": 416
-                },
-                "end": {
-                  "column": 34,
-                  "line": 7,
-                  "offset": 443
-                },
-                "source": "<span class=\"i\">隐私政策</span>"
-              }
-            },
-            {
-              "type": 2,
-              "content": " ",
-              "loc": {
-                "start": {
-                  "column": 34,
-                  "line": 7,
-                  "offset": 443
-                },
-                "end": {
-                  "column": 35,
-                  "line": 7,
-                  "offset": 444
-                },
-                "source": " "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "i",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "home-header-version-separate",
-                    "loc": {
-                      "start": {
-                        "column": 44,
-                        "line": 7,
-                        "offset": 453
-                      },
-                      "end": {
-                        "column": 74,
-                        "line": 7,
-                        "offset": 483
-                      },
-                      "source": "\"home-header-version-separate\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 38,
-                      "line": 7,
-                      "offset": 447
-                    },
-                    "end": {
-                      "column": 74,
-                      "line": 7,
-                      "offset": 483
-                    },
-                    "source": "class=\"home-header-version-separate\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [],
-              "loc": {
-                "start": {
-                  "column": 35,
-                  "line": 7,
-                  "offset": 444
-                },
-                "end": {
-                  "column": 79,
-                  "line": 7,
-                  "offset": 488
-                },
-                "source": "<i class=\"home-header-version-separate\"></i>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n      ",
-              "loc": {
-                "start": {
-                  "column": 79,
-                  "line": 7,
-                  "offset": 488
-                },
-                "end": {
-                  "column": 7,
-                  "line": 8,
-                  "offset": 496
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "span",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "i",
-                    "loc": {
-                      "start": {
-                        "column": 19,
-                        "line": 8,
-                        "offset": 508
-                      },
-                      "end": {
-                        "column": 22,
-                        "line": 8,
-                        "offset": 511
-                      },
-                      "source": "\"i\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 13,
-                      "line": 8,
-                      "offset": 502
-                    },
-                    "end": {
-                      "column": 22,
-                      "line": 8,
-                      "offset": 511
-                    },
-                    "source": "class=\"i\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "申请权限",
-                  "loc": {
-                    "start": {
-                      "column": 23,
-                      "line": 8,
-                      "offset": 512
-                    },
-                    "end": {
-                      "column": 27,
-                      "line": 8,
-                      "offset": 516
-                    },
-                    "source": "申请权限"
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 8,
-                  "offset": 496
-                },
-                "end": {
-                  "column": 34,
-                  "line": 8,
-                  "offset": 523
-                },
-                "source": "<span class=\"i\">申请权限</span>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n    ",
-              "loc": {
-                "start": {
-                  "column": 34,
-                  "line": 8,
-                  "offset": 523
-                },
-                "end": {
-                  "column": 5,
-                  "line": 9,
-                  "offset": 529
-                },
-                "source": "\r\n    "
-              }
-            }
-          ],
-          "loc": {
-            "start": {
-              "column": 5,
-              "line": 3,
-              "offset": 57
-            },
-            "end": {
-              "column": 15,
-              "line": 9,
-              "offset": 539
-            },
-            "source": "<section class=\"home-header-version\"><span>应用版本：v{{ appInfo.version }}</span>\r\n      <i class=\"home-header-version-separate\"></i> <span>开发者：{{ appInfo.developer }}</span>\r\n      <i class=\"home-header-version-separate home-header-version-separate-left\"></i>\r\n      <span>更新时间：{{ appInfo.updateTime }}</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">隐私政策</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">申请权限</span>\r\n    </section>"
-          }
-        },
-        {
-          "type": 2,
-          "content": "\r\n    ",
-          "loc": {
-            "start": {
-              "column": 15,
-              "line": 9,
-              "offset": 539
-            },
-            "end": {
-              "column": 5,
-              "line": 10,
-              "offset": 545
-            },
-            "source": "\r\n    "
-          }
-        },
-        {
-          "type": 1,
-          "ns": 0,
-          "tag": "div",
-          "tagType": 0,
-          "props": [
-            {
-              "type": 6,
-              "name": "class",
-              "value": {
-                "type": 2,
-                "content": "OpenInAppBarWrap",
-                "loc": {
-                  "start": {
-                    "column": 16,
-                    "line": 10,
-                    "offset": 556
-                  },
-                  "end": {
-                    "column": 34,
-                    "line": 10,
-                    "offset": 574
-                  },
-                  "source": "\"OpenInAppBarWrap\""
-                }
-              },
-              "loc": {
-                "start": {
-                  "column": 10,
-                  "line": 10,
-                  "offset": 550
-                },
-                "end": {
-                  "column": 34,
-                  "line": 10,
-                  "offset": 574
-                },
-                "source": "class=\"OpenInAppBarWrap\""
-              }
-            },
-            {
-              "type": 6,
-              "name": "style",
-              "value": {
-                "type": 2,
-                "content": "display: block !important;",
-                "loc": {
-                  "start": {
-                    "column": 41,
-                    "line": 10,
-                    "offset": 581
-                  },
-                  "end": {
-                    "column": 69,
-                    "line": 10,
-                    "offset": 609
-                  },
-                  "source": "\"display: block !important;\""
-                }
-              },
-              "loc": {
-                "start": {
-                  "column": 35,
-                  "line": 10,
-                  "offset": 575
-                },
-                "end": {
-                  "column": 69,
-                  "line": 10,
-                  "offset": 609
-                },
-                "source": "style=\"display: block !important;\""
-              }
-            }
-          ],
-          "isSelfClosing": false,
-          "children": [
-            {
-              "type": 2,
-              "content": "      ",
-              "loc": {
-                "start": {
-                  "column": 70,
-                  "line": 10,
-                  "offset": 610
-                },
-                "end": {
-                  "column": 7,
-                  "line": 11,
-                  "offset": 618
-                },
-                "source": "\r\n      "
-              }
-            },
-            {
-              "type": 1,
-              "ns": 0,
-              "tag": "div",
-              "tagType": 0,
-              "props": [
-                {
-                  "type": 6,
-                  "name": "class",
-                  "value": {
-                    "type": 2,
-                    "content": "OpenInAppBarWrap_content",
-                    "loc": {
-                      "start": {
-                        "column": 18,
-                        "line": 11,
-                        "offset": 629
-                      },
-                      "end": {
-                        "column": 44,
-                        "line": 11,
-                        "offset": 655
-                      },
-                      "source": "\"OpenInAppBarWrap_content\""
-                    }
-                  },
-                  "loc": {
-                    "start": {
-                      "column": 12,
-                      "line": 11,
-                      "offset": 623
-                    },
-                    "end": {
-                      "column": 44,
-                      "line": 11,
-                      "offset": 655
-                    },
-                    "source": "class=\"OpenInAppBarWrap_content\""
-                  }
-                }
-              ],
-              "isSelfClosing": false,
-              "children": [
-                {
-                  "type": 2,
-                  "content": "        ",
-                  "loc": {
-                    "start": {
-                      "column": 45,
-                      "line": 11,
-                      "offset": 656
-                    },
-                    "end": {
-                      "column": 9,
-                      "line": 12,
-                      "offset": 666
-                    },
-                    "source": "\r\n        "
-                  }
-                },
-                {
-                  "type": 1,
-                  "ns": 0,
-                  "tag": "h1",
-                  "tagType": 0,
-                  "props": [
-                    {
-                      "type": 6,
-                      "name": "class",
-                      "value": {
-                        "type": 2,
-                        "content": "OpenInAppBarWrap_title",
-                        "loc": {
-                          "start": {
-                            "column": 19,
-                            "line": 12,
-                            "offset": 676
-                          },
-                          "end": {
-                            "column": 43,
-                            "line": 12,
-                            "offset": 700
-                          },
-                          "source": "\"OpenInAppBarWrap_title\""
-                        }
-                      },
-                      "loc": {
-                        "start": {
-                          "column": 13,
-                          "line": 12,
-                          "offset": 670
-                        },
-                        "end": {
-                          "column": 43,
-                          "line": 12,
-                          "offset": 700
-                        },
-                        "source": "class=\"OpenInAppBarWrap_title\""
-                      }
-                    }
-                  ],
-                  "isSelfClosing": false,
-                  "children": [
-                    {
-                      "type": 1,
-                      "ns": 0,
-                      "tag": "i",
-                      "tagType": 0,
-                      "props": [],
-                      "isSelfClosing": false,
-                      "children": [],
-                      "loc": {
-                        "start": {
-                          "column": 44,
-                          "line": 12,
-                          "offset": 701
-                        },
-                        "end": {
-                          "column": 51,
-                          "line": 12,
-                          "offset": 708
-                        },
-                        "source": "<i></i>"
-                      }
-                    },
-                    {
-                      "type": 2,
-                      "content": "安居客专享特价房源",
-                      "loc": {
-                        "start": {
-                          "column": 51,
-                          "line": 12,
-                          "offset": 708
-                        },
-                        "end": {
-                          "column": 60,
-                          "line": 12,
-                          "offset": 717
-                        },
-                        "source": "安居客专享特价房源"
-                      }
-                    }
-                  ],
-                  "loc": {
-                    "start": {
-                      "column": 9,
-                      "line": 12,
-                      "offset": 666
-                    },
-                    "end": {
-                      "column": 65,
-                      "line": 12,
-                      "offset": 722
-                    },
-                    "source": "<h1 class=\"OpenInAppBarWrap_title\"><i></i>安居客专享特价房源</h1>"
-                  }
-                },
-                {
-                  "type": 2,
-                  "content": "\r\n        ",
-                  "loc": {
-                    "start": {
-                      "column": 65,
-                      "line": 12,
-                      "offset": 722
-                    },
-                    "end": {
-                      "column": 9,
-                      "line": 13,
-                      "offset": 732
-                    },
-                    "source": "\r\n        "
-                  }
-                },
-                {
-                  "type": 1,
-                  "ns": 0,
-                  "tag": "div",
-                  "tagType": 0,
-                  "props": [
-                    {
-                      "type": 6,
-                      "name": "class",
-                      "value": {
-                        "type": 2,
-                        "content": "OpenInAppBarWrap_btnOpen",
-                        "loc": {
-                          "start": {
-                            "column": 20,
-                            "line": 13,
-                            "offset": 743
-                          },
-                          "end": {
-                            "column": 46,
-                            "line": 13,
-                            "offset": 769
-                          },
-                          "source": "\"OpenInAppBarWrap_btnOpen\""
-                        }
-                      },
-                      "loc": {
-                        "start": {
-                          "column": 14,
-                          "line": 13,
-                          "offset": 737
-                        },
-                        "end": {
-                          "column": 46,
-                          "line": 13,
-                          "offset": 769
-                        },
-                        "source": "class=\"OpenInAppBarWrap_btnOpen\""
-                      }
-                    }
-                  ],
-                  "isSelfClosing": false,
-                  "children": [
-                    {
-                      "type": 2,
-                      "content": "立即打开",
-                      "loc": {
-                        "start": {
-                          "column": 47,
-                          "line": 13,
-                          "offset": 770
-                        },
-                        "end": {
-                          "column": 51,
-                          "line": 13,
-                          "offset": 774
-                        },
-                        "source": "立即打开"
-                      }
-                    }
-                  ],
-                  "loc": {
-                    "start": {
-                      "column": 9,
-                      "line": 13,
-                      "offset": 732
-                    },
-                    "end": {
-                      "column": 57,
-                      "line": 13,
-                      "offset": 780
-                    },
-                    "source": "<div class=\"OpenInAppBarWrap_btnOpen\">立即打开</div>"
-                  }
-                },
-                {
-                  "type": 2,
-                  "content": "\r\n        ",
-                  "loc": {
-                    "start": {
-                      "column": 57,
-                      "line": 13,
-                      "offset": 780
-                    },
-                    "end": {
-                      "column": 9,
-                      "line": 14,
-                      "offset": 790
-                    },
-                    "source": "\r\n        "
-                  }
-                },
-                {
-                  "type": 1,
-                  "ns": 0,
-                  "tag": "div",
-                  "tagType": 0,
-                  "props": [
-                    {
-                      "type": 6,
-                      "name": "class",
-                      "value": {
-                        "type": 2,
-                        "content": "OpenInAppBarWrap_btnOpenInApp",
-                        "loc": {
-                          "start": {
-                            "column": 20,
-                            "line": 14,
-                            "offset": 801
-                          },
-                          "end": {
-                            "column": 51,
-                            "line": 14,
-                            "offset": 832
-                          },
-                          "source": "\"OpenInAppBarWrap_btnOpenInApp\""
-                        }
-                      },
-                      "loc": {
-                        "start": {
-                          "column": 14,
-                          "line": 14,
-                          "offset": 795
-                        },
-                        "end": {
-                          "column": 51,
-                          "line": 14,
-                          "offset": 832
-                        },
-                        "source": "class=\"OpenInAppBarWrap_btnOpenInApp\""
-                      }
-                    }
-                  ],
-                  "isSelfClosing": false,
-                  "children": [
-                    {
-                      "type": 2,
-                      "content": "下载 APP",
-                      "loc": {
-                        "start": {
-                          "column": 52,
-                          "line": 14,
-                          "offset": 833
-                        },
-                        "end": {
-                          "column": 58,
-                          "line": 14,
-                          "offset": 839
-                        },
-                        "source": "下载 APP"
-                      }
-                    }
-                  ],
-                  "loc": {
-                    "start": {
-                      "column": 9,
-                      "line": 14,
-                      "offset": 790
-                    },
-                    "end": {
-                      "column": 64,
-                      "line": 14,
-                      "offset": 845
-                    },
-                    "source": "<div class=\"OpenInAppBarWrap_btnOpenInApp\">下载 APP</div>"
-                  }
-                },
-                {
-                  "type": 2,
-                  "content": "\r\n      ",
-                  "loc": {
-                    "start": {
-                      "column": 64,
-                      "line": 14,
-                      "offset": 845
-                    },
-                    "end": {
-                      "column": 7,
-                      "line": 15,
-                      "offset": 853
-                    },
-                    "source": "\r\n      "
-                  }
-                }
-              ],
-              "loc": {
-                "start": {
-                  "column": 7,
-                  "line": 11,
-                  "offset": 618
-                },
-                "end": {
-                  "column": 13,
-                  "line": 15,
-                  "offset": 859
-                },
-                "source": "<div class=\"OpenInAppBarWrap_content\">\r\n        <h1 class=\"OpenInAppBarWrap_title\"><i></i>安居客专享特价房源</h1>\r\n        <div class=\"OpenInAppBarWrap_btnOpen\">立即打开</div>\r\n        <div class=\"OpenInAppBarWrap_btnOpenInApp\">下载 APP</div>\r\n      </div>"
-              }
-            },
-            {
-              "type": 2,
-              "content": "\r\n    ",
-              "loc": {
-                "start": {
-                  "column": 13,
-                  "line": 15,
-                  "offset": 859
-                },
-                "end": {
-                  "column": 5,
-                  "line": 16,
-                  "offset": 865
-                },
-                "source": "\r\n    "
-              }
-            }
-          ],
-          "loc": {
-            "start": {
-              "column": 5,
-              "line": 10,
-              "offset": 545
-            },
-            "end": {
-              "column": 11,
-              "line": 16,
-              "offset": 871
-            },
-            "source": "<div class=\"OpenInAppBarWrap\" style=\"display: block !important;\">\r\n      <div class=\"OpenInAppBarWrap_content\">\r\n        <h1 class=\"OpenInAppBarWrap_title\"><i></i>安居客专享特价房源</h1>\r\n        <div class=\"OpenInAppBarWrap_btnOpen\">立即打开</div>\r\n        <div class=\"OpenInAppBarWrap_btnOpenInApp\">下载 APP</div>\r\n      </div>\r\n    </div>"
-          }
-        },
-        {
-          "type": 2,
-          "content": "\r\n  ",
-          "loc": {
-            "start": {
-              "column": 11,
-              "line": 16,
-              "offset": 871
-            },
-            "end": {
-              "column": 3,
-              "line": 17,
-              "offset": 875
-            },
-            "source": "\r\n  "
+            "source": "{{ item }}"
           }
         }
       ],
@@ -1438,11 +183,608 @@
           "offset": 14
         },
         "end": {
-          "column": 9,
-          "line": 17,
-          "offset": 881
+          "column": 73,
+          "line": 2,
+          "offset": 84
         },
-        "source": "<div class=\"OpenInAppBarAppInfoWrap\">\r\n    <section class=\"home-header-version\"><span>应用版本：v{{ appInfo.version }}</span>\r\n      <i class=\"home-header-version-separate\"></i> <span>开发者：{{ appInfo.developer }}</span>\r\n      <i class=\"home-header-version-separate home-header-version-separate-left\"></i>\r\n      <span>更新时间：{{ appInfo.updateTime }}</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">隐私政策</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">申请权限</span>\r\n    </section>\r\n    <div class=\"OpenInAppBarWrap\" style=\"display: block !important;\">\r\n      <div class=\"OpenInAppBarWrap_content\">\r\n        <h1 class=\"OpenInAppBarWrap_title\"><i></i>安居客专享特价房源</h1>\r\n        <div class=\"OpenInAppBarWrap_btnOpen\">立即打开</div>\r\n        <div class=\"OpenInAppBarWrap_btnOpenInApp\">下载 APP</div>\r\n      </div>\r\n    </div>\r\n  </div>"
+        "source": "<div class=\"xixi\" v-if=\"isTrue\" v-for=\"item in array\">{{ item }}</div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 73,
+          "line": 2,
+          "offset": 84
+        },
+        "end": {
+          "column": 3,
+          "line": 3,
+          "offset": 88
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "haha",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 3,
+                "offset": 99
+              },
+              "end": {
+                "column": 20,
+                "line": 3,
+                "offset": 105
+              },
+              "source": "\"haha\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 3,
+              "offset": 93
+            },
+            "end": {
+              "column": 20,
+              "line": 3,
+              "offset": 105
+            },
+            "source": "class=\"haha\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "else-if",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 32,
+                "line": 3,
+                "offset": 117
+              },
+              "end": {
+                "column": 38,
+                "line": 3,
+                "offset": 123
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 3,
+              "offset": 106
+            },
+            "end": {
+              "column": 39,
+              "line": 3,
+              "offset": 124
+            },
+            "source": "v-else-if=\"isTrue\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 3,
+          "offset": 88
+        },
+        "end": {
+          "column": 46,
+          "line": 3,
+          "offset": 131
+        },
+        "source": "<div class=\"haha\" v-else-if=\"isTrue\"></div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 46,
+          "line": 3,
+          "offset": 131
+        },
+        "end": {
+          "column": 3,
+          "line": 4,
+          "offset": 135
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "hehe",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 4,
+                "offset": 146
+              },
+              "end": {
+                "column": 20,
+                "line": 4,
+                "offset": 152
+              },
+              "source": "\"hehe\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 4,
+              "offset": 140
+            },
+            "end": {
+              "column": 20,
+              "line": 4,
+              "offset": 152
+            },
+            "source": "class=\"hehe\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "else",
+          "exp": {
+            "type": 4,
+            "content": "isTrue",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 29,
+                "line": 4,
+                "offset": 161
+              },
+              "end": {
+                "column": 35,
+                "line": 4,
+                "offset": 167
+              },
+              "source": "isTrue"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 21,
+              "line": 4,
+              "offset": 153
+            },
+            "end": {
+              "column": 36,
+              "line": 4,
+              "offset": 168
+            },
+            "source": "v-else=\"isTrue\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [
+        {
+          "type": 2,
+          "content": "    666666666\r\n  ",
+          "loc": {
+            "start": {
+              "column": 37,
+              "line": 4,
+              "offset": 169
+            },
+            "end": {
+              "column": 3,
+              "line": 6,
+              "offset": 188
+            },
+            "source": "\r\n    666666666\r\n  "
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 4,
+          "offset": 135
+        },
+        "end": {
+          "column": 9,
+          "line": 6,
+          "offset": 194
+        },
+        "source": "<div class=\"hehe\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 9,
+          "line": 6,
+          "offset": 194
+        },
+        "end": {
+          "column": 3,
+          "line": 7,
+          "offset": 198
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 7,
+          "name": "for",
+          "exp": {
+            "type": 4,
+            "content": "item in array",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 15,
+                "line": 7,
+                "offset": 210
+              },
+              "end": {
+                "column": 28,
+                "line": 7,
+                "offset": 223
+              },
+              "source": "item in array"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 7,
+              "offset": 203
+            },
+            "end": {
+              "column": 29,
+              "line": 7,
+              "offset": 224
+            },
+            "source": "v-for=\"item in array\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [
+        {
+          "type": 2,
+          "content": "123123",
+          "loc": {
+            "start": {
+              "column": 30,
+              "line": 7,
+              "offset": 225
+            },
+            "end": {
+              "column": 36,
+              "line": 7,
+              "offset": 231
+            },
+            "source": "123123"
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 7,
+          "offset": 198
+        },
+        "end": {
+          "column": 42,
+          "line": 7,
+          "offset": 237
+        },
+        "source": "<div v-for=\"item in array\">123123</div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 42,
+          "line": 7,
+          "offset": 237
+        },
+        "end": {
+          "column": 3,
+          "line": 8,
+          "offset": 241
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 7,
+          "name": "bind",
+          "exp": {
+            "type": 4,
+            "content": "message",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 18,
+                "line": 8,
+                "offset": 256
+              },
+              "end": {
+                "column": 25,
+                "line": 8,
+                "offset": 263
+              },
+              "source": "message"
+            }
+          },
+          "arg": {
+            "type": 4,
+            "content": "message",
+            "isStatic": true,
+            "constType": 3,
+            "loc": {
+              "start": {
+                "column": 9,
+                "line": 8,
+                "offset": 247
+              },
+              "end": {
+                "column": 16,
+                "line": 8,
+                "offset": 254
+              },
+              "source": "message"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 8,
+              "offset": 246
+            },
+            "end": {
+              "column": 26,
+              "line": 8,
+              "offset": 264
+            },
+            "source": ":message=\"message\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [
+        {
+          "type": 2,
+          "content": "5555555555",
+          "loc": {
+            "start": {
+              "column": 27,
+              "line": 8,
+              "offset": 265
+            },
+            "end": {
+              "column": 37,
+              "line": 8,
+              "offset": 275
+            },
+            "source": "5555555555"
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 8,
+          "offset": 241
+        },
+        "end": {
+          "column": 43,
+          "line": 8,
+          "offset": 281
+        },
+        "source": "<div :message=\"message\">5555555555</div>"
+      }
+    },
+    {
+      "type": 2,
+      "content": "\r\n  ",
+      "loc": {
+        "start": {
+          "column": 43,
+          "line": 8,
+          "offset": 281
+        },
+        "end": {
+          "column": 3,
+          "line": 9,
+          "offset": 285
+        },
+        "source": "\r\n  "
+      }
+    },
+    {
+      "type": 1,
+      "ns": 0,
+      "tag": "div",
+      "tagType": 0,
+      "props": [
+        {
+          "type": 6,
+          "name": "class",
+          "value": {
+            "type": 2,
+            "content": "oldClass",
+            "loc": {
+              "start": {
+                "column": 14,
+                "line": 9,
+                "offset": 296
+              },
+              "end": {
+                "column": 24,
+                "line": 9,
+                "offset": 306
+              },
+              "source": "\"oldClass\""
+            }
+          },
+          "loc": {
+            "start": {
+              "column": 8,
+              "line": 9,
+              "offset": 290
+            },
+            "end": {
+              "column": 24,
+              "line": 9,
+              "offset": 306
+            },
+            "source": "class=\"oldClass\""
+          }
+        },
+        {
+          "type": 7,
+          "name": "bind",
+          "exp": {
+            "type": 4,
+            "content": "{\r\n    name:isTrue,\r\n    name2:123,\r\n    name2:123,\r\n    isghy:ghy=='123',\r\n  }",
+            "isStatic": false,
+            "constType": 0,
+            "loc": {
+              "start": {
+                "column": 33,
+                "line": 9,
+                "offset": 315
+              },
+              "end": {
+                "column": 4,
+                "line": 14,
+                "offset": 394
+              },
+              "source": "{\r\n    name:isTrue,\r\n    name2:123,\r\n    name2:123,\r\n    isghy:ghy=='123',\r\n  }"
+            }
+          },
+          "arg": {
+            "type": 4,
+            "content": "class",
+            "isStatic": true,
+            "constType": 3,
+            "loc": {
+              "start": {
+                "column": 26,
+                "line": 9,
+                "offset": 308
+              },
+              "end": {
+                "column": 31,
+                "line": 9,
+                "offset": 313
+              },
+              "source": "class"
+            }
+          },
+          "modifiers": [],
+          "loc": {
+            "start": {
+              "column": 25,
+              "line": 9,
+              "offset": 307
+            },
+            "end": {
+              "column": 5,
+              "line": 14,
+              "offset": 395
+            },
+            "source": ":class=\"{\r\n    name:isTrue,\r\n    name2:123,\r\n    name2:123,\r\n    isghy:ghy=='123',\r\n  }\""
+          }
+        }
+      ],
+      "isSelfClosing": false,
+      "children": [
+        {
+          "type": 2,
+          "content": "ccc\r\n  ",
+          "loc": {
+            "start": {
+              "column": 6,
+              "line": 14,
+              "offset": 396
+            },
+            "end": {
+              "column": 3,
+              "line": 15,
+              "offset": 403
+            },
+            "source": "ccc\r\n  "
+          }
+        }
+      ],
+      "loc": {
+        "start": {
+          "column": 3,
+          "line": 9,
+          "offset": 285
+        },
+        "end": {
+          "column": 9,
+          "line": 15,
+          "offset": 409
+        },
+        "source": "<div class=\"oldClass\" :class=\"{\r\n    name:isTrue,\r\n    name2:123,\r\n    name2:123,\r\n    isghy:ghy=='123',\r\n  }\">ccc\r\n  </div>"
       }
     },
     {
@@ -1451,13 +793,13 @@
       "loc": {
         "start": {
           "column": 9,
-          "line": 17,
-          "offset": 881
+          "line": 15,
+          "offset": 409
         },
         "end": {
           "column": 1,
-          "line": 18,
-          "offset": 883
+          "line": 16,
+          "offset": 411
         },
         "source": "\r\n"
       }
@@ -1471,9 +813,9 @@
     },
     "end": {
       "column": 12,
-      "line": 18,
-      "offset": 894
+      "line": 16,
+      "offset": 422
     },
-    "source": "<template>\r\n  <div class=\"OpenInAppBarAppInfoWrap\">\r\n    <section class=\"home-header-version\"><span>应用版本：v{{ appInfo.version }}</span>\r\n      <i class=\"home-header-version-separate\"></i> <span>开发者：{{ appInfo.developer }}</span>\r\n      <i class=\"home-header-version-separate home-header-version-separate-left\"></i>\r\n      <span>更新时间：{{ appInfo.updateTime }}</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">隐私政策</span> <i class=\"home-header-version-separate\"></i>\r\n      <span class=\"i\">申请权限</span>\r\n    </section>\r\n    <div class=\"OpenInAppBarWrap\" style=\"display: block !important;\">\r\n      <div class=\"OpenInAppBarWrap_content\">\r\n        <h1 class=\"OpenInAppBarWrap_title\"><i></i>安居客专享特价房源</h1>\r\n        <div class=\"OpenInAppBarWrap_btnOpen\">立即打开</div>\r\n        <div class=\"OpenInAppBarWrap_btnOpenInApp\">下载 APP</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>"
+    "source": "<template>\r\n  <div class=\"xixi\" v-if=\"isTrue\" v-for=\"item in array\">{{ item }}</div>\r\n  <div class=\"haha\" v-else-if=\"isTrue\"></div>\r\n  <div class=\"hehe\" v-else=\"isTrue\">\r\n    666666666\r\n  </div>\r\n  <div v-for=\"item in array\">123123</div>\r\n  <div :message=\"message\">5555555555</div>\r\n  <div class=\"oldClass\" :class=\"{\r\n    name:isTrue,\r\n    name2:123,\r\n    name2:123,\r\n    isghy:ghy=='123',\r\n  }\">ccc\r\n  </div>\r\n</template>"
   }
 }
