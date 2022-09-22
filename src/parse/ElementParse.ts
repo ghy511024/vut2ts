@@ -210,7 +210,7 @@ export class ElementParse extends BaseParse {
         if (/\(.*?\)/gi.test(str)) {
             str.replace(/\((.*?),(.*?)\)/, (all, $1, $2) => {
                 item = $1;
-                index = $2;
+                index =  $2;
                 return ""
             })
         } else {
@@ -240,7 +240,7 @@ export class ElementParse extends BaseParse {
         for (var pro of props) {
             if (pro.type == 6 && pro.name == "class") {
                 isHaveClass = true;
-                staticClass = pro.value.content;
+                staticClass = pro.value.content.replace(/["|']/g,"");
                 classPro = pro;
             }
         }

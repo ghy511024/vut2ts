@@ -9,7 +9,9 @@
   "bin": {
     "vue2ts": "bin/vue2ts.js"
   },
-  "keywords": [],
+  "keywords": [
+    "vue2ts"
+  ],
   "author": "gonghongyu",
   "dependencies": {
     "@vue/compiler-sfc": "^3.2.37"

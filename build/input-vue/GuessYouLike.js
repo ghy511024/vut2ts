@@ -42,16 +42,16 @@ exports.default = {
             }
             this.expData('houseList', this).forEach(item => {
                 this['item'] = item;
-                str += `<li>    <a class='link' href="${this.expData('item.url', this)}" onclick="${this.expData('"clickLog(\""+item.clickLog+"\")"', this)}">      <div class='pic' bg-src="${this.expData('item.picUrl', this)}">        <div class='icon-wrap'>          ${(() => {
+                str += `<li class='item' logr="${this.expData('item.logr', this)}">    <a class='link' href="${this.expData('item.url', this)}" onclick="${this.expData('"clickLog(\""+item.clickLog+"\")"', this)}">      <div class='pic' bg-src="${this.expData('item.picUrl', this)}">        <div class='icon-wrap'>          ${(() => {
                     if (this.expData('item.quanJing', this)) {
-                        return `<i><i class='icon-vr-gif'></i></i>`;
+                        return `<i class='icon-vr-wrap'><i class='icon-vr-gif'></i></i>`;
                     }
                     return '';
                 })()}
 
           ${(() => {
                     if (this.expData('item.shiPin', this)) {
-                        return `<i></i>`;
+                        return `<i class='icon-vedio'></i>`;
                     }
                     return '';
                 })()}
@@ -59,29 +59,29 @@ exports.default = {
         </div>
         ${(() => {
                     if (this.expData('item.shiKan', this)) {
-                        return `<i></i>`;
+                        return `<i style='background-image:url(https://wos.58cdn.com.cn/cDazYxWcDHJ/picasso/54h2c23n.png)' class='icon-shikan'></i>`;
                     }
                     return '';
                 })()}
 
       </div>
-      <div class='desc'>        <p class="${(this.expData('true', this) ? 'title' : '') + ' ' + (this.expData('isLine2(item)', this) ? '"title-line2"' : '')}">${this.expData('item.title', this)}</p>
+      <div class='desc'>        <p class="${((this.expData('true', this) ? 'title' : '') + ' ' + (this.expData('isLine2(item)', this) ? 'title-line2' : '')).replace(/(^\s+|\s+$)/g, '')}">${this.expData('item.title', this)}</p>
         <p class='place'>${this.expData('item.address', this)}</p>
         ${(() => {
                     if (this.expData('item.type=="3"', this)) {
-                        return `<p>${this.expData('item.address', this)}</p>`;
+                        return `<p class='plant-address'>${this.expData('item.address', this)}</p>`;
                     }
                     else {
-                        return `<p>          ${(() => {
+                        return `<p class='tips'>          ${(() => {
                             if (this.expData('item.anXuan', this)) {
-                                return `<span>安选</span>`;
+                                return `<span class='tag anxuan'>安选</span>`;
                             }
                             return '';
                         })()}
 
           ${(() => {
                             if (this.expData('item.shiPai', this)) {
-                                return `<span>                 <span class='anxuan'>安选</span><span class='photo'>实拍</span>
+                                return `<span class='tag anxuan-photograph'>                 <span class='anxuan'>安选</span><span class='photo'>实拍</span>
           </span>`;
                             }
                             return '';
@@ -95,7 +95,7 @@ exports.default = {
                             }
                             this.expData('item.tagsV2', this).forEach(tag => {
                                 this['tag'] = tag;
-                                str += `<span>                       ${this.expData('tag.title', this)}
+                                str += `<span class='tag' style="${((this.expData('tag.textColor', this) ? 'color' : '') + ' ' + (this.expData('tag.borderColor', this) ? 'border-color' : '') + ' ' + (this.expData('tag.bgColor', this) ? 'background-color' : '')).replace(/(^\s+|\s+$)/g, '')}">                       ${this.expData('tag.title', this)}
           </span>`;
                             });
                             this['tag'] = _tmpItem;

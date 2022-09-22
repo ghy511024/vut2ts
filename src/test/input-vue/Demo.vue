@@ -7,7 +7,7 @@
   <div v-for="item in array">123123</div>
   <div :message="message">5555555555</div>
   <div class="oldClass" :class="{
-    name:isTrue,
+    'name':isTrue,
     name2:123,
     name2:123,
     isghy:ghy=='123',

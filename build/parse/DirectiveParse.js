@@ -24,6 +24,7 @@ class DirectiveParse extends BaseParse_1.BaseParse {
         let content = node.exp["content"];
         content = content.replace(/[\r\n\s]/g, '');
         if (/^{[\S\s]*?\}/.test(content)) {
+            out.write(`(`);
             content = content.replace(/[\{\}]/g, "");
             const array = content.split(",");
             for (var i = 0; i < array.length; i++) {
@@ -33,7 +34,8 @@ class DirectiveParse extends BaseParse_1.BaseParse {
                     if (i >= 1) {
                         out.write(`+' '+`);
                     }
-                    let expNodeKey = { content: rt[0], isStatic: true };
+                    let key = rt[0].replace(/("|')/g, "");
+                    let expNodeKey = { content: key, isStatic: true };
                     let expNodeValue = { content: rt[1], isStatic: false };
                     out.write(`(`);
                     ParseManager_1.parseManager.getParseByType(node.exp.type).parse(out, expNodeValue);
@@ -42,6 +44,7 @@ class DirectiveParse extends BaseParse_1.BaseParse {
                     out.write(`':'')`);
                 }
             }
+            out.write(`).replace(/(^\\s+|\\s+$)/g,'')`);
         }
         else {
             ParseManager_1.parseManager.getParseByType(node.exp.type).parse(out, node.exp);

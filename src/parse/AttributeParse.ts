@@ -14,6 +14,7 @@ export class AttributeParse extends BaseParse {
         const type = node.type
         const value = node.value
         out.write(` ${name}='`)
+
         parseManager.getParseByType(value.type).parse(out, value)
         out.write(`'`)
     }

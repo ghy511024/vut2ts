@@ -214,7 +214,7 @@ class ElementParse extends BaseParse_1.BaseParse {
         for (var pro of props) {
             if (pro.type == 6 && pro.name == "class") {
                 isHaveClass = true;
-                staticClass = pro.value.content;
+                staticClass = pro.value.content.replace(/["|']/g, "");
                 classPro = pro;
             }
         }

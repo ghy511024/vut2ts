@@ -8,6 +8,7 @@ import {File} from "./bean/File";
  * create by ghy 2022/9/13 10:31
  * @desc 1
  */
+
 export class Main {
     cwd: string
     file: string
