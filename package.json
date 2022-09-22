@@ -12,6 +12,10 @@
   "keywords": [
     "vue2ts"
   ],
+  "files": [
+    "bin",
+    "build"
+  ],
   "author": "gonghongyu",
   "dependencies": {
     "@vue/compiler-sfc": "^3.2.37"
