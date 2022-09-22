@@ -4,7 +4,7 @@
 
 ### install
 ```shell
-npm i @wb/vue2ts -g
+npm i vue2ts -g
 ```
 
 ### use
