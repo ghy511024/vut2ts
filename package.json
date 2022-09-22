@@ -1,16 +1,17 @@
 {
-  "name": "vue2ts",
+  "name": "vut2ts",
   "version": "0.1.0",
   "main": "dist/Main.js",
   "scripts": {
     "build": "tsc",
-    "test": "vue2ts src"
+    "test": "vut2ts src"
   },
+  "description": "vue template to es6 string",
   "bin": {
-    "vue2ts": "bin/vue2ts.js"
+    "vut2ts": "bin/vue2ts.js"
   },
   "keywords": [
-    "vue2ts"
+    "vue", "template"
   ],
   "files": [
     "bin",

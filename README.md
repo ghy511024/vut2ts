@@ -4,15 +4,15 @@
 
 ### install
 ```shell
-npm i vue2ts -g
+npm i vut2ts -g
 ```
 
 ### use
 ```shell
 # single file
-vue2ts ./src/demo.vue
+vut2ts ./src/demo.vue
 # directory
-vue2ts ./src
+vut2ts ./src
 ```
 
 ### demo
@@ -45,7 +45,7 @@ export default {
  ```
 * 2 compile (Demo.vue => Demo.ts)
 ```shell
-vue2ts ./demo.vue
+vut2ts ./demo.vue
 ```
 * 3 Demo.ts
 
@@ -121,7 +121,7 @@ const data: House[] = [
     },
     {
         img: "http://xxx.com/b.png",
-        title: "nice vue2ts",
+        title: "nice vut2ts",
         id: 456
     }
 ]
@@ -136,7 +136,7 @@ output
     <li class="houseItem xixi"><h1 houseId="123">hello word</h1>
         <img src="http://xxx.com/a.png"/>
     </li>
-    <li class="houseItem"><h1 houseId="456">nice vue2ts</h1>
+    <li class="houseItem"><h1 houseId="456">nice vut2ts</h1>
         <img src="http://xxx.com/b.png"/>
     </li>
 </ul>
