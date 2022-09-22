@@ -15,8 +15,6 @@ vue2ts ./src/demo.vue
 vue2ts ./src
 ```
 
-
-
 ### demo
 
 * 1 Demo.vue

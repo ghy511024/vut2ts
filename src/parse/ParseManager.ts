@@ -12,7 +12,6 @@ import {CommentParse} from "./CommentParse";
 import {AttributeParse} from "./AttributeParse";
 import {DirectiveParse} from "./DirectiveParse";
 
-
 export class ParseManager {
     private elementParse: ElementParse
     private textParse: TextParse

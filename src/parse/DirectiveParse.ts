@@ -1,3 +1,7 @@
+/**
+ * create by ghy 2022/8/23 18:58
+ * @desc 属性解析
+ */
 import {BaseParse} from "./BaseParse";
 import {
     AttributeNode, CompoundExpressionNode, ConstantTypes,
@@ -10,10 +14,7 @@ import {
 import {parseManager} from "./ParseManager";
 import {OutStream} from "../writer/OutStream";
 
-/**
- * create by ghy 2022/8/23 18:58
- * @desc 属性解析
- */
+
 export class DirectiveParse extends BaseParse {
     parse(out: OutStream, node: DirectiveNode) {
         const name = node.name
